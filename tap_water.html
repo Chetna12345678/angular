@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+div {
+  transition: all linear 0.5s;
+  background-color: skyblue;
+  height: 370px;
+  width: 50px;
+}
+
+.ng-hide {
+  height: 0;
+}
+
+.center-tap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-water {
+  display: block;
+  margin-left: 55%;
+  margin-right: 44%;
+}
+
+.size {
+  width: 20%;
+  height: 20%;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+
+<body ng-app="myApp">
+
+<input type="checkbox" id="myCheckbox1" ng-model="myCheck">
+
+<label for="myCheckbox1"><img src="tap.jpg" alt="tap-img" class="center-tap size" /></label>
+
+<div ng-hide="myCheck" class="center-water"></div>
+
+<script>
+var app = angular.module('myApp', ['ngAnimate']);
+</script>
+
+</body>
+</html>
